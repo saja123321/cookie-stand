@@ -1,0 +1,9 @@
+header ul li {
+    display: inline-block;
+}
+.icons {
+    text-align: center;
+    text-decoration: none;
+    margin: 10px;
+    border-radius: 50%;
+}

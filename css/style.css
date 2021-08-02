@@ -7,3 +7,36 @@ header ul li {
     margin: 10px;
     border-radius: 50%;
 }
+ th, tr , td {
+    padding: 1%;
+    margin: 1%;
+    border-radius: 35%;
+    text-align: center;
+  }
+  td{
+      width:3%;
+padding: 10px;      
+  }
+
+  table{
+      padding: 0.5%;
+      width: 70%;
+      
+  }
+
+  tr:nth-child(even)
+   {background-color: lightpink;}
+   tr:nth-child(odd)
+   {background-color:lightgray;}
+ 
+   h2{
+       color: lightpink;
+       padding: 0.5%;
+       font-family: "Lucida Console", "Courier New", monospac    ;
+
+
+   }
+   body{
+       font-family: Courier ;
+       background-color: lightslategrey;
+   }

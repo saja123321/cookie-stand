@@ -17,11 +17,17 @@ header ul li {
       width:3%;
 padding: 10px;      
   }
+  .logo{
+      width:100px;
+  }
 
   table{
       padding: 0.5%;
       width: 70%;
       
+  }
+  .plank{
+      width: 700px;
   }
 
   tr:nth-child(even)

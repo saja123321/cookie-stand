@@ -1,7 +1,7 @@
 header ul li {
     display: inline-block;
 }
-.icons {
+header ul li a{
     text-align: center;
     text-decoration: none;
     margin: 10px;
@@ -12,12 +12,10 @@ header ul li {
     margin: 1%;
     border-radius: 50%;
     text-align: center;
-
   }
   
   .home-table{
-width: 90%;
-margin: auto;
+width: 1000px;
   }
   .home-table td{
 padding: 10px; 
@@ -32,7 +30,6 @@ padding: 10px;
 
   table{
     margin: auto;
-
       padding: 0.5%;
       width: 70%;
       
@@ -68,26 +65,37 @@ padding: 10px;
    }
   .img-sec1{
       display: grid ;
-      grid-template-columns: auto  auto;
+      grid-template-columns: auto  auto auto auto auto auto;
       width: 920;
-      margin: 80px;
-      gap: 50px;
+      margin:auto;
+      align-items: center;
+      align-content: center;
+      gap: 0px;
+
 
   }
   .img-sec1 img{
-  width: 500px;
-  height: 300px;
-border-radius: 50%;
+    margin: 50px 20px 20px 20px;
+  width: 200px;
+  height: 200px;
+  float:left; 
+  border-radius: 50%;
   }
 
   .img-sec1 img:hover{
-    width: 550px;
-    height: 350px;
-      border: dodgerblue 7px solid;
+    transition: all 1000ms;
+    width: 250px;
+    height: 220px;
+    border: dodgerblue 7px solid;
+    background-color: indianred;
   }
   table tr  th:hover ,  td:hover{
-    width: 100px;
-    height: 100px;
+   font-size: 22px;
     border: dodgerblue 2px solid;
-    border-radius: 50%;
-  } 
+    font-weight: bold;
+    transition: all 1000ms;
+  }
+  h1:hover{
+    transition: all 1000ms;
+    font-size : 40px;
+  }

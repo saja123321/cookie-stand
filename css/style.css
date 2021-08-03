@@ -9,16 +9,20 @@ header ul li a{
 }
  th, tr , td {
     padding: 1%;
-    margin: 1%;
-    border-radius: 50%;
+    border-spacing : 50px;
     text-align: center;
   }
   
-  .home-table{
-width: 1000px;
+  .home-table tr{
   }
-  .home-table td{
-padding: 10px; 
+  .b{
+    background-color: lightslategrey;
+    width: 10px;
+  }
+  .home-table tr , td , th{
+    border-radius: 25%;
+    width: 55%;
+    padding: 10px; 
     }
   td{
       width:3%;
@@ -32,7 +36,6 @@ padding: 10px;
     margin: auto;
       padding: 0.5%;
       width: 70%;
-      
   }
   .plank{
       width: 200px;

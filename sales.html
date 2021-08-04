@@ -1,24 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="text/javascript"  src="./js/app.js" defer></script>
-    <!-- <link rel="stylesheet" href="../css/reset.css" /> -->
-    <link rel="stylesheet" href="./css/style.css" /> 
-    <title>Sales</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="text/javascript" src="./js/app.js" defer></script>
+  <!-- <link rel="stylesheet" href="../css/reset.css" /> -->
+  <link rel="stylesheet" href="./css/style.css" />
+  <title>Sales</title>
 </head>
+
 <body>
   <h2>
-    Pat's Salmon Cookies : Sales Data 
+    Pat's Salmon Cookies : Sales Data
   </h2>
-  <a href="./index.html" > Home Page</a>
+  <a href="./index.html" class="home-link"> Home Page</a>
+  <fieldset >
+  <form id="cookiesForm">
+    <label for="locNameId"> Add New Location Form </label>
+    <div>
+      <label for="locNameId"> Location </label>
+      <input type="text" name="locName" id="locNameId" required>
+      <label for="locMinId">  Minimum Number of  Customers Per Hour </label>
+      <input type="number" name="locMin" id="locMinId" required>
+      <label for="locMaxId"> Maximum Number of Customers Per Hour. </label>
+      <input type="number" name="locMax" id="locMaxId" required>
+      <label for="locAvgId"> Average Number cookies purchased per customer.</label>
+      <input type="number" name="locAvg" id="locAvgId" required>
+    </div>
+    <input type="submit" id="submit" value="add">
+  </form>
+</fieldset>
   <div id="d">
 
   </div>
 </body>
 <script>
- 
+
 </script>
+
 </html>

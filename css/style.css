@@ -12,9 +12,6 @@ header ul li a{
     border-spacing : 50px;
     text-align: center;
   }
-  
-  .home-table tr{
-  }
   .b{
     background-color: lightslategrey;
     width: 10px;
@@ -101,4 +98,37 @@ padding: 10px;
   h1:hover{
     transition: all 1000ms;
     font-size : 40px;
+  }
+
+  #cookiesForm{
+   
+    background-color: lightslategrey ;
+    text-align: center;
+    border-radius: 20px;
+    border: lightpink 3px solid;
+    margin: auto;
+    width: 70%;
+  
+    margin-bottom: 20px;
+  }
+  form div {
+    display: grid;
+    grid-template-columns: 50% 30% ;
+    gap :10px;
+    text-align: center;
+    align-items: center;
+    padding: 20px ;
+  }
+  #submit{
+    width: 30%;
+   margin: 10px auto;
+   height: 20px;
+
+  }
+  .home-link{
+    width: 100px ;
+    height: 20px;
+    background-color:lightslategrey ;
+    border-radius: 20px;
+    text-align: center;
   }

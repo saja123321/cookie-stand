@@ -15,7 +15,7 @@ function CookieStand(name , min , max , avg ){
 CookieStand.prototype.customersPerHour = function () {
   for (let i = 0; i < hours.length; i++) {
     this.hourlyCustomers[i] = Math.floor(Math.random() * (this.max - this.min + 1) + this.min);
-    console.log(this.hourlyCustomers[i]);
+
   }
   return this.hourlyCustomers;
 };
@@ -24,14 +24,12 @@ CookieStand.prototype.cookiesPerHour = function () {
   for (let i = 0; i < hours.length; i++) {
     this.numOfCookies[i] = Math.floor(this.hourlyCustomers[i] * this.avg);
     this.total += this.numOfCookies[i];
-    console.log(this.numOfCookies[i] + '  .. ' + this.total);
   }
   return this.numOfCookies;
 };
 CookieStand.prototype.ressultFun = function () {
   for (let i = 0; i < hours.length; i++) {
     this.result[i] = this.numOfCookies[i];
-    console.log(this.result[i] =this.numOfCookies[i]);
   }
   return this.result;
 };
@@ -41,6 +39,7 @@ let tokyo = new CookieStand('Tokyo', 3 , 24 ,1.2);
 let dubai = new CookieStand ('Dubai',11,38, 3.7);
 let paris = new CookieStand('Paris', 20, 38, 2.3);
 const lima = new CookieStand('Lima', 20, 38, 2.3);
+
 let loc = [seattle,tokyo,dubai,paris,lima];
 /////////////
 let divE = document.getElementById('d');
@@ -95,18 +94,22 @@ for (let index = 0; index < loc.length; index++) {
   loc[index].render();
 
 }
-
+let totalEachHour = [0,0,0,0,0,0,0,0,0,0,0,0,0,0];
 function totalHoury(){
   let t = 0 ;
-  let totalEachHour = [];
+
   let footerTE = document.createElement('tr');
+  footerTE.id = 'footerId';
+
   tableE.appendChild(footerTE);
 
   let tdL = document.createElement('td');
   tdL.textContent = 'Totals';
   footerTE.appendChild(tdL);
   for(let x= 0 ; x<hours.length ; x++){
-    totalEachHour[x] = loc[0].result[x] + loc[1].result[x] + loc[2].result[x]+ loc[3].result[x]+loc[4].result[x];
+    for (let y =0 ; y < loc.length ; y++ ){
+      totalEachHour[x] += loc[y].result[x];
+    }
     t += totalEachHour[x];
     let tdTE = document.createElement('td');
     tdTE.textContent = totalEachHour[x] ;
@@ -115,6 +118,34 @@ function totalHoury(){
   let tdTE = document.createElement('td');
   tdTE.textContent = t;
   footerTE.appendChild(tdTE);
-  console.log(t);
 }
 totalHoury();
+
+
+let cookiesForm = document.getElementById('cookiesForm');
+cookiesForm.addEventListener('submit' , addLocation);
+
+function addLocation (event){
+  event.preventDefault();
+  delFooter();
+  let newLocName = event.target.locNameId.value;
+  let newLocMin = event.target.locMinId.value;
+  let newLocMax = event.target.locMaxId.value;
+  let newLocAvg = event.target.locAvgId.value;
+  let newLoc = new CookieStand(newLocName , newLocMin , newLocMax , newLocAvg );
+  loc.push(newLoc);
+  newLoc.customersPerHour();
+  newLoc.cookiesPerHour();
+  newLoc.ressultFun();
+  newLoc.render();
+
+  totalHoury();
+
+}
+
+function delFooter(){
+  let footerRow=document.getElementById('footerId');
+  footerRow.remove();
+}
+
+

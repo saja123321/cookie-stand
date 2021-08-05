@@ -44,11 +44,18 @@ padding: 10px;
    {background-color:lightgray;}
  
    h2{
-       color: lightpink;
+       /* color: lightpink;
        padding: 0.5%;
        font-family: "Lucida Console", "Courier New", monospac    ;
-       text-align: center;
+       text-align: center; */
 
+
+   }
+   h2 , h1 , h3 , h4 , h5 , h6 {
+    font-family: 'Pacifico', cursive;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 1.756;
 
    }
    body{
@@ -58,7 +65,8 @@ padding: 10px;
    h1{
        width: 700px;
        text-align: center;
-       text-decoration: wavy;
+       font-size: 40px;
+       color: rgb(16, 16, 75);
    }
    .home-table tr:nth-child(even){
        background-color: lightslategrey;
@@ -132,3 +140,8 @@ padding: 10px;
     border-radius: 20px;
     text-align: center;
   }
+  #d{
+    height: 300px;
+    overflow-y: scroll ;
+  }
+  

@@ -94,6 +94,7 @@ for (let index = 0; index < loc.length; index++) {
   loc[index].render();
 
 }
+
 let totalEachHour = [0,0,0,0,0,0,0,0,0,0,0,0,0,0];
 function totalHoury(){
   let t = 0 ;

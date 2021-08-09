@@ -18,19 +18,6 @@ CookieStand.prototype.customersPerHour = function () {
   return this.hourlyCustomers;
 };
 
-// CookieStand.prototype.cookiesPerHour = function () {
-//   for (let i = 0; i < hours.length; i++) {
-//     this.numOfCookies[i] = Math.floor(this.hourlyCustomers[i] * this.avg);
-//     this.total += this.numOfCookies[i];
-//   }
-//   return this.numOfCookies;
-// };
-// CookieStand.prototype.ressultFun = function () {
-//   for (let i = 0; i < hours.length; i++) {
-//     this.result[i] = this.numOfCookies[i];
-//   }
-//   return this.result;
-// };
 
 let seattle = new CookieStand('Seattle' ,23 , 65 , 6.3 );
 let tokyo = new CookieStand('Tokyo', 3 , 24 ,1.2);
@@ -90,8 +77,8 @@ for (let index = 0; index < loc.length; index++) {
 
 }
 
-let totalEachHour = [0,0,0,0,0,0,0,0,0,0,0,0,0,0];
 function totalHoury(){
+  let totalEachHour = [0,0,0,0,0,0,0,0,0,0,0,0,0,0];
   let t = 0 ;
   let footerTE = document.createElement('tr');
   footerTE.id = 'footerId';
@@ -101,12 +88,13 @@ function totalHoury(){
   let tdL = document.createElement('td');
   tdL.textContent = 'Totals';
   footerTE.appendChild(tdL);
-  for(let x= 0 ; x<hours.length ; x++){
+  for(let x= 0 ; x< hours.length ; x++){
     for (let y =0 ; y < loc.length ; y++ ){
       totalEachHour[x] += loc[y].hourlyCustomers[x];
     }
     t += totalEachHour[x];
     let tdTE = document.createElement('td');
+    console.log(totalEachHour[x])
     tdTE.textContent = totalEachHour[x] ;
     footerTE.appendChild(tdTE);
   }
